@@ -3,7 +3,7 @@ import React from "react";
 
 const AppNav = (props) => {
   return (
-    <nav></nav>
+    <nav id="app-nav"></nav>
   );
 };
 

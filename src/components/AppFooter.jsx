@@ -3,7 +3,7 @@ import React from "react";
 
 const AppFooter = (props) => {
   return (
-    <footer></footer>
+    <footer id="app-footer"></footer>
   );
 };
 
