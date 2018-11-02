@@ -39,7 +39,9 @@ class App extends React.Component {
   getRandomQuote(e) {
     let length = this.state.quotes.length;
     let i = Math.floor(Math.random() * length);
-    this.setState({ randomIndex: i});
+
+    i === this.state.randomIndex ? this.getRandomQuote(e) : this.setState({ randomIndex: i});
+
     this.getRandomColorScheme();
   };
 
