@@ -24,11 +24,11 @@
   width: 90%;
   min-width: 320px;
   max-width: 720px;
-  min-height: 192px;
+  min-height: 280px;
   border-radius: 8px;
   box-shadow: 0 0 28px #1F1F1F;
-  overflow: hidden;
-  background-color: lightgoldenrodyellow
+  transition: background-color 0.5s;
+  overflow: hidden
 }
 
 #quote-box h2 {
@@ -45,12 +45,12 @@
   width: 120px;
   height: 36px;
   font-size: 18px;
-  background-color: lightgreen;
   border-radius: 4px;
+  color: #F0F0F0;
   cursor: pointer;
   outline: none;
   border: none;
-  opacity: 1.0;
+  opacity: 0.75;
   transition: opacity 0.25s
 }
 

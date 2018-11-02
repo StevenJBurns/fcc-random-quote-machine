@@ -47,7 +47,10 @@ class App extends React.Component {
 
   getRandomColorScheme() {
     let r = Math.floor(Math.random() * colorSchemes.length);
-    this.setState({ randomScheme: r})
+
+    r === this.state.randomScheme ? this.getRandomColorScheme() : this.setState({ randomScheme: r });
+
+    // this.setState({ randomScheme: r})
   }
 
   componentDidMount() {
@@ -63,13 +66,9 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <AppHeader bg={colorSchemes[this.state.randomScheme]["dark"]}>
-          <AppNav />
-        </AppHeader>
-        <AppMain getQuote={this.getRandomQuote} quote={q} bg={colorSchemes[this.state.randomScheme]["dark"]} />
-        <AppFooter bg={colorSchemes[this.state.randomScheme]["dark"]}>
-          <AppNav />
-        </AppFooter>
+        <AppHeader scheme={colorSchemes[this.state.randomScheme]} />
+        <AppMain getQuote={this.getRandomQuote} quote={q} scheme={colorSchemes[this.state.randomScheme]} />
+        <AppFooter scheme={colorSchemes[this.state.randomScheme]} />
       </React.Fragment>
     );
   };
