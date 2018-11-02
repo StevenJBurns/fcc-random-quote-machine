@@ -11,16 +11,16 @@ import './styles/App.css';
 
 const urlQuotes = "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
 
-const colorSchemes = {
-  red : [],
-  blue: [],
-  purple: [],
-  orange: [],
-  green: [],
-  brown: [],
-  gold: [],
-  grey: []
-}
+const colorSchemes = [
+  { red: { dark: "#b71c1c", light: "#ffcdd2" }},
+  { blue: { dark: "#0d47a1", light: "#bbdefb" }},
+  { purple: { dark: "#311b92", light: "#d1c4e9" }},
+  { orange: { dark: "#bf360c", light: "#ffccbc" }},
+  { green: { dark: "#1b5e20", light: "#c8e6c9" }},
+  { brown: { dark: "#3e2723", light: "#d7ccc8" }},
+  { gold: { dark: "#ffd600", light: "#fff9c4" }},
+  { grey: { dark: "#424242", light: "#e0e0e0" }}
+];
 
 class App extends React.Component {
   constructor(props) {
@@ -28,24 +28,30 @@ class App extends React.Component {
 
     this.state = {
       quotes: [],
-      randomQuote: {},
       randomIndex: -1
     };
 
     this.getRandomQuote = this.getRandomQuote.bind(this);
+    this.getRandomColorScheme = this.getRandomColorScheme.bind(this);
   };
 
   getRandomQuote(e) {
     let length = this.state.quotes.length;
     let i = Math.floor(Math.random() * length);
     this.setState({ randomIndex: i});
+    this.getRandomColorScheme();
   };
+
+  getRandomColorScheme() {
+    console.log(Math.floor(Math.random() * colorSchemes.length));
+  }
 
   componentDidMount() {
     fetch(urlQuotes)
       .then(res => res.json())
       .then(resJSON => this.setState({ quotes: [...resJSON["quotes"]] }))
-      .then(this.getRandomQuote);
+      .then(this.getRandomQuote)
+      .then(this.getRandomColorScheme);
   };
 
   render() {
