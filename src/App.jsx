@@ -12,14 +12,14 @@ import './styles/App.css';
 const urlQuotes = "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
 
 const colorSchemes = [
-  { red: { dark: "#b71c1c", light: "#ffcdd2" }},
-  { blue: { dark: "#0d47a1", light: "#bbdefb" }},
-  { purple: { dark: "#311b92", light: "#d1c4e9" }},
-  { orange: { dark: "#bf360c", light: "#ffccbc" }},
-  { green: { dark: "#1b5e20", light: "#c8e6c9" }},
-  { brown: { dark: "#3e2723", light: "#d7ccc8" }},
-  { gold: { dark: "#ffd600", light: "#fff9c4" }},
-  { grey: { dark: "#424242", light: "#e0e0e0" }}
+  /* red */     { dark: "#b71c1c", light: "#ffcdd2" },
+  /* blue */    { dark: "#0d47a1", light: "#bbdefb" },
+  /* purple */  { dark: "#311b92", light: "#d1c4e9" },
+  /* orange */  { dark: "#bf360c", light: "#ffccbc" },
+  /* green */   { dark: "#1b5e20", light: "#c8e6c9" },
+  /* brown */   { dark: "#3e2723", light: "#d7ccc8" },
+  /* gold */    { dark: "#ffd600", light: "#fff9c4" },
+  /* grey */    { dark: "#424242", light: "#e0e0e0" }
 ];
 
 class App extends React.Component {
@@ -28,7 +28,8 @@ class App extends React.Component {
 
     this.state = {
       quotes: [],
-      randomIndex: -1
+      randomIndex: -1,
+      randomScheme: 0
     };
 
     this.getRandomQuote = this.getRandomQuote.bind(this);
@@ -43,7 +44,8 @@ class App extends React.Component {
   };
 
   getRandomColorScheme() {
-    console.log(Math.floor(Math.random() * colorSchemes.length));
+    let r = Math.floor(Math.random() * colorSchemes.length);
+    this.setState({ randomScheme: r})
   }
 
   componentDidMount() {
@@ -59,11 +61,11 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <AppHeader>
+        <AppHeader bg={colorSchemes[this.state.randomScheme]["dark"]}>
           <AppNav />
         </AppHeader>
-        <AppMain getQuote={this.getRandomQuote} quote={q} />
-        <AppFooter>
+        <AppMain getQuote={this.getRandomQuote} quote={q} bg={colorSchemes[this.state.randomScheme]["dark"]} />
+        <AppFooter bg={colorSchemes[this.state.randomScheme]["dark"]}>
           <AppNav />
         </AppFooter>
       </React.Fragment>

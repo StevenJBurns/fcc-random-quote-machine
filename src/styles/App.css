@@ -1,13 +1,12 @@
 #app-header {
   min-height: 48px;
   color: #0F0F0F;
-  background-color: transparent
+  transition: background-color 1s
 }
 
 #app-nav {
   min-height: 24px;
   text-align: center;
-  background-color: transparent
 }
 
 #app-main {
@@ -17,7 +16,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: azure;
   transition: background-color 1s
 }
 
@@ -63,12 +61,13 @@
 #app-footer {
   min-height: 48px;
   color: #61dafb;
-  background-color: navajowhite;
   transition: background-color 1s
 }
 
 @media(max-width: 360px) {
   #quote-box {
+    margin: 0;
+    width: 100%;
     border-radius: 0;
     box-shadow: none
   }
