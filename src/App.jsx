@@ -18,7 +18,7 @@ const colorSchemes = [
   /* orange */  { dark: "#bf360c", light: "#ffccbc" },
   /* green */   { dark: "#1b5e20", light: "#c8e6c9" },
   /* brown */   { dark: "#3e2723", light: "#d7ccc8" },
-  /* gold */    { dark: "#ffd600", light: "#fff9c4" },
+  /* gold */    { dark: "#ffab00", light: "#fff9c4" },
   /* grey */    { dark: "#424242", light: "#e0e0e0" }
 ];
 
