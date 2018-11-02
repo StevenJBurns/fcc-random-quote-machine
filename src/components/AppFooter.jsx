@@ -3,7 +3,7 @@ import React from "react";
 
 const AppFooter = (props) => {
   return (
-    <footer id="app-footer"></footer>
+    <footer id="app-footer">{props.children}</footer>
   );
 };
 

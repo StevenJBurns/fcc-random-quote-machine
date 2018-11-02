@@ -8,7 +8,9 @@ import AppNav from "./components/AppNav.jsx";
 import './styles/App.css';
 // import logo from './assets/logo.svg';
 
+
 const urlQuotes = "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +19,7 @@ class App extends React.Component {
     this.state = {
       quotes: [],
       randomQuote: {},
-      randomIbdex: -1
+      randomIndex: -1
     };
 
     this.getRandomQuote = this.getRandomQuote.bind(this);
@@ -26,7 +28,7 @@ class App extends React.Component {
   getRandomQuote(e) {
     let length = this.state.quotes.length;
     let i = Math.floor(Math.random() * length);
-    this.setState({ randomIbdex: i});
+    this.setState({ randomIndex: i});
   };
 
   componentDidMount() {
@@ -37,14 +39,17 @@ class App extends React.Component {
   };
 
   render() {
-    let q = this.state.quotes[this.state.randomIbdex]
+    let q = this.state.quotes[this.state.randomIndex]
 
     return (
       <React.Fragment>
-        <AppHeader />
-        <AppNav />
+        <AppHeader>
+          <AppNav />
+        </AppHeader>
         <AppMain getQuote={this.getRandomQuote} quote={q} />
-        <AppFooter />
+        <AppFooter>
+          <AppNav />
+        </AppFooter>
       </React.Fragment>
     );
   };

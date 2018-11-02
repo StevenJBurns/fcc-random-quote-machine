@@ -1,13 +1,13 @@
 #app-header {
   min-height: 48px;
   color: #0F0F0F;
-  background-color: #282c34
+  background-color: transparent
 }
 
 #app-nav {
   min-height: 24px;
   text-align: center;
-  background-color: aqua
+  background-color: transparent
 }
 
 #app-main {
@@ -17,7 +17,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: azure
+  background-color: azure;
+  transition: background-color 1s
 }
 
 #quote-box {
@@ -26,11 +27,49 @@
   min-width: 320px;
   max-width: 720px;
   min-height: 192px;
+  border-radius: 8px;
+  box-shadow: 0 0 28px #7F7F7F;
+  overflow: hidden;
   background-color: lightgoldenrodyellow
+}
+
+#quote-box h2 {
+  margin: 16px;
+  text-align: left
+}
+
+#quote-box h4 {
+  margin: 16px;
+  text-align: right
+}
+
+#quote-box button {
+  width: 120px;
+  height: 36px;
+  font-size: 18px;
+  background-color: lightgreen;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  opacity: 1.0;
+  transition: opacity 0.25s
+}
+
+#quote-box button:hover {
+  opacity: 0.5;
 }
 
 #app-footer {
   min-height: 48px;
   color: #61dafb;
-  background-color: navajowhite
+  background-color: navajowhite;
+  transition: background-color 1s
+}
+
+@media(max-width: 360px) {
+  #quote-box {
+    border-radius: 0;
+    box-shadow: none
+  }
 }
