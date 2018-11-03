@@ -1,12 +1,27 @@
 #app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   min-height: 48px;
   color: #F0F0F0;
-  text-align: right;
   transition: background-color 1s
 }
 
 #app-header * {
+  margin: 4px
+}
+
+#div-headings-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   margin: 8px
+}
+
+#div-headings-wrapper * {
+  text-align: right;
+  display: inline-block
 }
 
 #app-nav {
@@ -27,7 +42,7 @@
 #quote-box {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 16px auto;
   width: 90%;
   min-width: 320px;
   max-width: 600px;
@@ -38,7 +53,7 @@
   overflow: hidden
 }
 
-#quote-box h2 {
+#quote-box h3 {
   margin: 16px;
   text-align: center
 }

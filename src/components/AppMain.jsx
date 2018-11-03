@@ -10,7 +10,7 @@ const AppMain = (props) => {
   return (
     <main id="app-main" style={{ backgroundColor: scheme["dark"] }}>
       <section id="quote-box" style={{ backgroundColor: scheme["light"] }}>
-        <h2 id="text">&quot;{quote ? quote.quote : null}&quot;</h2>
+        <h3 id="text">&quot;{quote ? quote.quote : null}&quot;</h3>
         <h4 id="author">-- {quote ? quote.author : null}</h4>
         <div id="div-button-wrapper">
           <a id="tweet-quote" href="https://twitter.com/intent/tweet">
