@@ -9,8 +9,10 @@ const AppMain = (props) => {
       <section id="quote-box" style={{ backgroundColor: scheme["light"] }}>
         <h2 id="text">&quot;{quote ? quote.quote : null}&quot;</h2>
         <h4 id="author">-- {quote ? quote.author : null}</h4>
-        <a id="tweet-quote" href="https://twitter.com/intent/tweet">TWEET</a>
-        <button id="new-quote" style={{ backgroundColor: props.scheme["dark"] }} onClick={getQuote}>New Quote</button>
+        <div id="div-button-wrapper">
+          <a id="tweet-quote" href="https://twitter.com/intent/tweet">TWEET</a>
+          <button id="new-quote" style={{ backgroundColor: props.scheme["dark"] }} onClick={getQuote}>New Quote</button>
+        </div>
       </section>
     </main>
   );

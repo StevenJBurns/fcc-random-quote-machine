@@ -1,7 +1,7 @@
 #app-header {
   min-height: 48px;
   color: #0F0F0F;
-  transition: background-color 0.5s
+  transition: background-color 1s
 }
 
 #app-nav {
@@ -16,10 +16,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: background-color 0.5s
+  transition: background-color 1s
 }
 
 #quote-box {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: 90%;
   min-width: 320px;
@@ -27,18 +29,28 @@
   min-height: 280px;
   border-radius: 8px;
   box-shadow: 0 0 28px #1F1F1F;
-  transition: background-color 0.5s;
+  transition: all 1s;
   overflow: hidden
 }
 
 #quote-box h2 {
   margin: 16px;
-  text-align: left
+  text-align: center
 }
 
 #quote-box h4 {
   margin: 16px;
   text-align: right
+}
+
+#div-button-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin: 16px
 }
 
 #quote-box button {
@@ -51,7 +63,8 @@
   outline: none;
   border: none;
   opacity: 0.75;
-  transition: opacity 0.25s
+  transition: all 1s;
+  justify-self: flex-end
 }
 
 #quote-box button:hover {
@@ -61,7 +74,7 @@
 #app-footer {
   min-height: 48px;
   color: #61dafb;
-  transition: background-color 0.5s
+  transition: background-color 1s
 }
 
 @media(max-width: 360px) {
