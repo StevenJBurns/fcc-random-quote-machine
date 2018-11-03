@@ -11,7 +11,7 @@ const AppHeader = (props) => {
         <h2>Random Quotes</h2>
         <h4>built for Free Code Camp</h4>  
       </div>
-      <FontAwesomeIcon icon={ faFreeCodeCamp } color="#F0F0F0" size="4x" />
+      <FontAwesomeIcon icon={ faFreeCodeCamp } className="faIcon" color="#F0F0F0" size="4x" />
     </header>
   );
 };

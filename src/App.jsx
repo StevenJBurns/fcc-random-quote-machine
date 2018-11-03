@@ -3,7 +3,6 @@ import React from 'react';
 import AppMain from "./components/AppMain.jsx";
 import AppHeader from "./components/AppHeader.jsx";
 import AppFooter from "./components/AppFooter.jsx";
-import AppNav from "./components/AppNav.jsx";
 
 import './styles/App.css';
 // import logo from './assets/logo.svg';

@@ -8,8 +8,8 @@
   transition: background-color 1s
 }
 
-#app-header * {
-  margin: 4px
+#app-header .faIcon {
+  margin: 0 8px
 }
 
 #div-headings-wrapper {
@@ -53,7 +53,7 @@
   overflow: hidden
 }
 
-#quote-box h3 {
+#quote-box h2 {
   margin: 16px;
   text-align: center
 }
@@ -61,6 +61,11 @@
 #quote-box h4 {
   margin: 16px;
   text-align: right
+}
+
+#quote-box .faIcon {
+  margin: 0;
+  transition: all 1s
 }
 
 #div-button-wrapper {
@@ -74,15 +79,16 @@
 
 #quote-box button {
   width: 120px;
-  height: 36px;
+  height: 42px;
+  margin-bottom: 4px;
   font-size: 18px;
   border-radius: 4px;
   color: #F0F0F0;
   cursor: pointer;
   outline: none;
   border: none;
-  opacity: 0.75;
-  transition: all 1s;
+  opacity: 1.0;
+  transition: all 0.5s;
   justify-self: flex-end
 }
 
@@ -97,8 +103,23 @@
   transition: background-color 1s
 }
 
-.faIcon {
-  transition: all 1s
+#app-footer * {
+  margin: 8px 0
+}
+
+#app-footer li {
+  margin: 0 8px;
+  display: inline-block
+}
+
+a:link, a:visited {
+  color: #F0F0F0;
+  opacity: 1.0;
+  transition: all 0.5s
+}
+
+a:hover, a:active {
+  opacity: 0.5;
 }
 
 @media(max-width: 360px) {
