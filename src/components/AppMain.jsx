@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons"
+import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
 
 
 const AppMain = (props) => {

@@ -5,7 +5,6 @@ import AppHeader from "./components/AppHeader.jsx";
 import AppFooter from "./components/AppFooter.jsx";
 
 import './styles/App.css';
-// import logo from './assets/logo.svg';
 
 
 const urlQuotes = "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
@@ -48,8 +47,6 @@ class App extends React.Component {
     let r = Math.floor(Math.random() * colorSchemes.length);
 
     r === this.state.randomScheme ? this.getRandomColorScheme() : this.setState({ randomScheme: r });
-
-    // this.setState({ randomScheme: r})
   }
 
   componentDidMount() {
@@ -61,7 +58,7 @@ class App extends React.Component {
   };
 
   render() {
-    let q = this.state.quotes[this.state.randomIndex]
+    let q = this.state.quotes[this.state.randomIndex];
 
     return (
       <React.Fragment>

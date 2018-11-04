@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFreeCodeCamp } from "@fortawesome/free-brands-svg-icons"
+import { faFreeCodeCamp } from "@fortawesome/free-brands-svg-icons";
 
 
 const AppHeader = (props) => {
